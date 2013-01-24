@@ -1,0 +1,22 @@
+<apex:page controller="add" >
+
+ <apex:form >
+ 
+ <apex:pageBlock >
+ 
+ <apex:outputLabel value="Enter first value"  />
+  <apex:inputText value="{!a1}" />
+ 
+ 
+ <apex:outputLabel value="Enter second value"  />
+  <apex:inputText value="{!a2}"/>
+ <apex:outputLabel value="Result"/>
+<apex:inputText value="{!sums}"/>
+
+ <apex:pageBlockButtons >
+ <apex:commandButton value="ADD" action="{!addsum}"/> 
+ </apex:pageBlockButtons>
+ </apex:pageBlock>
+ </apex:form>
+ 
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>This is the biggest heading available</h1>
+  <h6>This is next smaller heading</h6>
+  This is created by manasa
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

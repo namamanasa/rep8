@@ -1,0 +1,41 @@
+<apex:page controller="SortingDates">
+    <apex:form >
+        <apex:pageBlock title="Number of weeks">
+        <apex:pageBlockButtons ><apex:commandButton id="countbutton" value="count" action="{!displaydays}"/></apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Course start Date:"></apex:outputLabel>
+                    <apex:inputText id="StartDate" value="{!courseStartDate}" size="6"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Course end Date:"></apex:outputLabel>
+                    <apex:inputText id="EndDate" value="{!courseEndDate}" size="6"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Number of Days Between:"></apex:outputLabel>
+                    <apex:outputText value="{!noofDays}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Course Duration in months:"></apex:outputLabel>
+                    <apex:outputText value="{!durationInMonths}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Course Duration in Weeks:"></apex:outputLabel>
+                    <apex:outputText value="{!durationInWeeks}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Course Duration in Yearss:"></apex:outputLabel>
+                    <apex:outputText value="{!countOfYears}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+                               
+                                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

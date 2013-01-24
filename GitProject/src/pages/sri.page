@@ -1,0 +1,82 @@
+<apex:page controller="dmyPosition">
+<apex:form >
+<apex:pageBlock mode="edit" >
+<apex:sectionHeader title="New" subtitle="Position"/>
+<apex:pageBlockButtons > 
+<apex:commandButton value="Save" action="{!save}" />
+
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Information" columns="2" >
+<apex:inputText id="positiontitle" label="Position Title:" required="true" value="{!ptitle}" />
+<apex:outputLabel value="Owner :">{! $User.FirstName & ' ' & $User.LastName}</apex:outputLabel>
+
+ <apex:selectList id="choosevalue" size="1"  label="Status :" value="{!pstatus}">
+            <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+            <apex:selectOption itemValue="Fulltim" itemLabel="Fulltime"/>
+            <apex:selectOption itemValue="parttime" itemLabel="parttime"/>
+            <apex:selectOption itemValue="Internship" itemLabel="Internship"/>
+        </apex:selectList> 
+        <apex:outputLabel value="Opendate"><apex:inputText id="date_From" value="{!fromDate}" size="10" onfocus="DatePicker.pickDate(true, '{!$Component.date_From}', false);"/> [{!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}]</apex:outputLabel>
+  
+
+ <apex:selectList id="FunctionalArea" Size="1" label="Functional Area" value="{!pfa}">
+ <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+            <apex:selectOption itemValue="Finance" itemLabel="Finance"/>
+            <apex:selectOption itemValue="HR" itemLabel="HR"/>
+            <apex:selectOption itemValue="IT" itemLabel="IT"/>
+            <apex:selectOption itemValue="Retail Operation" itemLabel="Retail Operation"/>
+            
+ 
+ </apex:selectList>
+ <apex:outputLabel value="Closed Date"><apex:inputText id="date_From1" value="{!fromDate1}" size="10" onfocus="DatePicker.pickDate(true, '{!$Component.date_From1}', false);"/> [{!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}]</apex:outputLabel>
+  
+ <apex:selectList id="JabApplication" Size="1" label="Job application" value="{!pja}">
+            <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+            <apex:selectOption itemValue="FN-100" itemLabel="FN-100"/>
+            <apex:selectOption itemValue="FN-200" itemLabel="FN-200"/>
+            <apex:selectOption itemValue="HR-100" itemLabel="HR-100"/>
+            <apex:selectOption itemValue="HR-200" itemLabel="HR-200"/>
+            </apex:selectList>
+            <!--apex:outputLabel value="Hire Date"><apex:inputText id="date_From2" value="{!fromDate2}" size="10" onfocus="DatePicker.pickDate(true, '{!$Component.date_From2}', false);"/> [{!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}]</apex:outputLabel-->
+             
+          
+<apex:selectList id="Location" Size="1" label="Location" value="{!plocation}" >
+            <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+            <apex:selectOption itemValue="Newdhelhi " itemLabel="NewDelhi"/>
+            <apex:selectOption itemValue="FN-200" itemLabel="FN-200"/>
+            <apex:selectOption itemValue="HR-100" itemLabel="HR-100"/>
+            <apex:selectOption itemValue="HR-200" itemLabel="HR-200"/>
+            </apex:selectList>
+            
+            <apex:selectList id="Type" Size="1" label="Type" value="{!ptype}">
+            <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+            <apex:selectOption itemValue="Fulltime " itemLabel="Fulltime"/>
+            <apex:selectOption itemValue="Parttime" itemLabel="parttime"/>
+            <apex:selectOption itemValue="Internship" itemLabel="Internship"/>
+            
+            </apex:selectList>
+            
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Skills"  >
+<apex:inputCheckbox label="C#" id="c"/>
+<apex:inputCheckbox label="Java" id="Java"/>
+<apex:inputCheckbox label="Java Script" id="JavaScript"/>
+<apex:inputCheckbox label="Apex" id="Apex"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Compensation">
+<apex:inputText id="Min" label="Minimum Sal" value="{!PMin}" />
+<apex:inputText id="Max" label="Maxmum Sal" value="{!pmax}" />
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Description" columns="1">
+
+<!--apex:inputTextarea id="JobDescription" label="Job Description" value="{!pjd}"/-->
+<apex:inputTextarea id="SkillsRequired" label="Skills Required" value="{!pskr}"/>
+<apex:inputTextarea id="Respnsibilities" label="Respnsibilities" value="{!prb}"/>
+<!--apex:inputTextarea id="Educationalrequiremen" label="Educational requirement" value="{!per}"/-->
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

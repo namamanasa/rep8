@@ -1,0 +1,39 @@
+<apex:page controller="DependentPicklistExample">
+    <apex:form id="myform">
+        
+        <apex:pageBlock >
+            <apex:pageblockSection columns="2"> 
+
+                <apex:pageBlockSectionItem >
+                    <apex:panelGrid cellpadding="0" cellspacing="0" columns="2" border="0" rowClasses="line" columnClasses="colspan50">
+                        
+                        <apex:outputLabel id="label1" value="Select Country" styleClass="labelCol" style="margin:0px 5px;"/>  
+                        <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+                        
+                        <apex:selectList id="Modulelist" value="{!CountryValue}" onchange="MyActionfunc()"  size="1" >
+                            <apex:actionFunction action="{!CallStates}" name="MyActionfunc" reRender="myform" status="LodingStatus"/>
+                            <apex:selectOptions value="{!Countrylist}"/>
+                        </apex:selectList>                                     
+                        
+                        </apex:outputPanel>  
+                    </apex:panelGrid> 
+                </apex:pageBlockSectionItem> 
+
+               <apex:pageBlockSectionItem >
+                    <apex:panelGrid cellpadding="0" cellspacing="0" columns="2" border="0" rowClasses="line" columnClasses="colspan50">
+    
+                        <apex:outputLabel id="label1" value=" States " styleClass="labelCol" style="margin:0px 5px;"/>
+                        <apex:outputPanel layout="block" styleClass="requiredInput">
+                        <apex:outputPanel layout="block" styleClass="requiredBlock"/>    
+                            <apex:selectList id="Modulelist" value="{!StatesValue}" size="1">
+                                <apex:selectOptions value="{!Stateslist}"/>
+                            </apex:selectList>                                     
+                        </apex:outputPanel>  
+                
+                    </apex:panelGrid> 
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

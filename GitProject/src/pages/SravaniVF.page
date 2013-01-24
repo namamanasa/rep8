@@ -1,0 +1,467 @@
+<apex:page standardStylesheets="false" id="sravani">
+
+    <html class="ext-strict">
+    
+    <head>
+    
+    
+    <script type="text/javascript"
+        src="/jslibrary/1351189248000/sfdc/JiffyStubs.js"></script>
+    <title>Cases ~ salesforce.com - Unlimited Edition</title>
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/zen-componentsCompatible.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/elements.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/common.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link 
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/chatterCore.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/GuidedTour.css"
+        media="handheld,print,projection,screen,tty ,tv" rel="stylesheet"
+        type="text/css" />
+    <link href="/EXT/ext-3.2.2/resources/css/ext-all-notheme.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/ExtCSS-SFDC.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/HelpBubble.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/chatterExtended.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/ChatterFiles.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/Case.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link href="/sCSS/26.0/sprites/1354583016000/Theme3/gc/dStandard.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1355819323000/Theme3/00Dc0000000wYsb/005c0000000GRYn/gc/dCustom0.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/extended.css"
+        media="handheld,print,projection,screen,tty,tv" rel="stylesheet"
+        type="text/css" />
+    <script src="/EXT/ext-3.2.2/ext.js" type="text/javascript"></script>
+    <script src="/jslibrary/1354563886000/sfdc/main.js"
+        type="text/javascript"></script>
+    <script src="/jslibrary/1351189248000/sfdc/Case.js"
+        type="text/javascript"></script>
+    <script src="/jslibrary/1352319344000/sfdc/Chatter.js"
+        type="text/javascript"></script>
+    <script src="/jslibrary/1351189248000/sfdc/DevContextMenu.js"
+        type="text/javascript"></script>
+    <script src="/jslibrary/1351189248000/sfdc/GuidedTour.js"
+        type="text/javascript"></script>
+    <script src="/jslibrary/labels/1354812998000/en_US.js"
+        type="text/javascript"></script>
+    <script type="text/javascript">window.sfdcPage = new ListPage();
+UserContext.initialize({"networkId":"","locale":"en_US","labelLastModified":"1354812998000","isDefaultNetwork":true,"today":"12/20/2012 1:57 PM","timeFormat":"h:mm a","userPreferences":[{"index":112,"name":"HideInlineEditSplash","value":false},{"index":114,"name":"OverrideTaskSendNotification","value":false},{"index":115,"name":"DefaultTaskSendNotification","value":false},{"index":119,"name":"HideUserLayoutStdFieldInfo","value":false},{"index":116,"name":"HideRPPWarning","value":false},{"index":87,"name":"HideInlineSchedulingSplash","value":false},{"index":88,"name":"HideCRUCNotification","value":false},{"index":89,"name":"HideNewPLESplash","value":false},{"index":90,"name":"HideNewPLEWarnIE6","value":false},{"index":122,"name":"HideOverrideSharingMessage","value":false},{"index":91,"name":"HideProfileILEWarn","value":false},{"index":93,"name":"HideProfileElvVideo","value":false},{"index":97,"name":"ShowPicklistEditSplash","value":false},{"index":92,"name":"HideDataCategorySplash","value":false},{"index":128,"name":"ShowDealView","value":false},{"index":129,"name":"HideDealViewGuidedTour","value":false},{"index":132,"name":"HideKnowledgeFirstTimeSetupMsg","value":false},{"index":104,"name":"DefaultOffEntityPermsMsg","value":false},{"index":135,"name":"HideNewCsnSplash","value":false},{"index":101,"name":"HideBrowserWarning","value":false},{"index":139,"name":"HideDashboardBuilderGuidedTour","value":false},{"index":140,"name":"HideSchedulingGuidedTour","value":false},{"index":180,"name":"HideReportBuilderGuidedTour","value":false},{"index":183,"name":"HideAssociationQueueCallout","value":false},{"index":194,"name":"HideQTEBanner","value":false},{"index":193,"name":"HideChatterOnboardingSplash","value":false},{"index":195,"name":"HideSecondChatterOnboardingSplash","value":true},{"index":270,"name":"HideIDEGuidedTour","value":true},{"index":282,"name":"HideQueryToolGuidedTour","value":true},{"index":196,"name":"HideCSIGuidedTour","value":false},{"index":271,"name":"HideFewmetGuidedTour","value":false},{"index":272,"name":"HideEditorGuidedTour","value":false},{"index":205,"name":"HideApexTestGuidedTour","value":false},{"index":206,"name":"HideSetupProfileHeaderTour","value":false},{"index":207,"name":"HideSetupProfileObjectsAndTabsTour","value":false},{"index":213,"name":"DefaultOffArticleTypeEntityPermMsg","value":false},{"index":214,"name":"HideSelfInfluenceGetStarted","value":false},{"index":215,"name":"HideOtherInfluenceGetStarted","value":false},{"index":216,"name":"HideFeedToggleGuidedTour","value":false},{"index":268,"name":"ShowChatterTab178GuidedTour","value":false},{"index":275,"name":"HidePeopleTabDeprecationMsg","value":false},{"index":276,"name":"HideGroupTabDeprecationMsg","value":false},{"index":222,"name":"TouchExternalLinkReminderSuppression","value":false},{"index":224,"name":"HideUnifiedSearchGuidedTour","value":false},{"index":226,"name":"ShowDevContextMenu","value":true},{"index":227,"name":"HideWhatRecommenderForActivityQueues","value":false},{"index":228,"name":"HideLiveAgentFirstTimeSetupMsg","value":false},{"index":232,"name":"HideGroupAllowsGuestsMsgOnMemberWidget","value":false},{"index":233,"name":"HideGroupAllowsGuestsMsg","value":false},{"index":234,"name":"HideWhatAreGuestsMsg","value":false},{"index":235,"name":"HideNowAllowGuestsMsg","value":false},{"index":236,"name":"HideSocialAccountsAndContactsGuidedTour","value":false},{"index":237,"name":"HideAnalyticsHomeGuidedTour","value":false},{"index":238,"name":"ShowQuickCreateGuidedTour","value":false},{"index":245,"name":"HideFilePageGuidedTour","value":false},{"index":250,"name":"HideForecastingGuidedTour","value":false},{"index":242,"name":"TouchHideOptoutHover","value":false},{"index":251,"name":"HideBucketFieldGuide","value":false},{"index":263,"name":"HideSmartSearchCallOut","value":false},{"index":265,"name":"HideSocialProfilesKloutSplashScreen","value":false},{"index":273,"name":"ShowForecastingQuotaAttainment","value":false},{"index":280,"name":"HideForecastingQuotaColumn","value":false},{"index":283,"name":"HideManyWhoGuidedTour","value":false},{"index":284,"name":"HideExternalSharingModelGuidedTour","value":false},{"index":298,"name":"HideFileSyncBannerMsg","value":false},{"index":299,"name":"HideTestConsoleGuidedTour","value":false}],"orgPreferences":[{"index":257,"name":"TabOrganizer","value":true}],"startOfWeek":"1","isAccessibleMode":false,"ampm":["AM","PM"],"renderMode":"RETRO","userId":"005c0000000GRYn","dateTimeFormat":"M/d/yyyy h:mm a","dateFormat":"M/d/yyyy","uiSkin":"Theme3","language":"en_US","siteUrlPrefix":""});
+</script>
+    <script type="text/javascript">try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/zen-componentsCompatible.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/elements.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/common.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/chatterCore.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/GuidedTour.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/EXT/ext-3.2.2/resources/css/ext-all-notheme.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/ExtCSS-SFDC.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/HelpBubble.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/chatterExtended.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/ChatterFiles.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/Case.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354583016000/Theme3/gc/dStandard.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1355819323000/Theme3/00Dc0000000wYsb/005c0000000GRYn/gc/dCustom0.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.addCssUrl("/sCSS/26.0/sprites/1354127940000/Theme3/default/gc/extended.css","handheld,print,projection,screen,tty,tv")}catch(e){}
+try{DynamicCss.doneLoading()}catch(e){}</script>
+    <link rel="shortcut icon"
+        href="https://cs14.salesforce.com/favicon.ico" />
+    <script src="/jslibrary/1351189248000/sfdc/Security.js"
+        type="text/javascript"></script>
+    <script type="text/javascript">ClientHash.prototype.needsClientHash('sid_Client','0000000GRYn0000000wYsb','14.140.147.82','/servlet/servlet.ClientHashValidator?ResponseRequestedURL=%2F500%3Ffcf%3D00BE0000001r0ut');</script>
+    </head>
+    <body onLoad="if(this.bodyOnLoad)bodyOnLoad();"
+        onBeforeUnload="if(this.bodyOnBeforeUnload){var s=bodyOnBeforeUnload();if(s)return s;}"
+        onUnload="if(this.bodyOnUnload)bodyOnUnload();"
+        onFocus="if(this.bodyOnFocus)bodyOnFocus();"
+        class="hasMotif caseTab  listPage  ext-webkit ext-chrome sfdcBody brandQuaternaryBgr">
+    <!-- Main Body Starts Here -->
+    <form id="SravaniId">
+    <style>
+    .outer td.oRight {
+        padding: 0px 10px 20px;
+    }
+    .bodyDiv {
+    background-color: rgb(255, 255, 255);
+    border-top: 0.0527cm solid;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0);
+    float: left;
+    min-width: 100%;
+}
+    </style>
+    <div id="contentWrapper">
+    <div class="bodyDiv brdPalette brandPrimaryBrd">
+    <table class="outer" width="100%" id="bodyTable" border="0"
+        cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="oRight" id="bodyCell" style="padding: 0px;">
+            <div class="individualPalette listViewportWrapper" style="width:100%; padding:0px Ppx 0px;"
+                id="00BE0000001r0ut_wrapper">
+            <div class="listViewport caseBlock" id="00BE0000001r0ut_listViewport">
+            <form action="" id="00BE0000001r0ut_actionForm"
+                name="00BE0000001r0ut_actionForm">
+            <div class="topNav primaryPalette" id="00BE0000001r0ut_topNav">
+            <div class="controls"><img src="/s.gif" alt="Case"
+                class="pageTitleIcon" title="Case" /> <select class="title"
+                id="00BE0000001r0ut_listSelect" name="fcf" title="View:">
+                <option value="00BE0000000y8HI">Assigned TO Me</option>
+            </select>
+            <div class="filterLinks" id="00BE0000001r0ut_filterLinks"><a
+                href="http://www.salesforce.com">Edit</a></div>
+            <span class="divisionLabel" id="00BE0000001r0ut_divisionLabel"></span>
+            <div class="topNavTab" id="00BE0000001r0ut_topNavTab"></div>
+            <div class="clearingBox"></div>
+            </div>
+            </div>
+            <div class="subNav" id="00BE0000001r0ut_subNav">
+            <div class="linkBar brandSecondaryBrd">
+            <div class="listButtons" id="00BE0000001r0ut_listButtons" style="">
+            <ul class="piped">
+                <li><input value="Get Case" class="btn" name="newCase"
+                    title="Get Case" type="button"/></li>
+                <li class="lastItem"><input type="button"
+                    id="00BE0000001r0ut_refresh" src="s.gif" href="javascript:void(0)"
+                    class="btn refreshListButton" title="Refresh"/></li>
+            </ul>
+            </div>
+            <div class="rolodex" id="00BE0000001r0ut_rolodex"><a
+                class="listItem"><span class="listItemPad">A</span></a><a
+                class="listItem"><span class="listItemPad">B</span></a><a
+                class="listItem"><span class="listItemPad">C</span></a><a
+                class="listItem"><span class="listItemPad">D</span></a><a
+                class="listItem"><span class="listItemPad">E</span></a><a
+                class="listItem"><span class="listItemPad">F</span></a><a
+                class="listItem"><span class="listItemPad">G</span></a><a
+                class="listItem"><span class="listItemPad">H</span></a><a
+                class="listItem"><span class="listItemPad">I</span></a><a
+                class="listItem"><span class="listItemPad">J</span></a><a
+                class="listItem"><span class="listItemPad">K</span></a><a
+                class="listItem"><span class="listItemPad">L</span></a><a
+                class="listItem"><span class="listItemPad">M</span></a><a
+                class="listItem"><span class="listItemPad">N</span></a><a
+                class="listItem"><span class="listItemPad">O</span></a><a
+                class="listItem"><span class="listItemPad">P</span></a><a
+                class="listItem"><span class="listItemPad">Q</span></a><a
+                class="listItem"><span class="listItemPad">R</span></a><a
+                class="listItem"><span class="listItemPad">S</span></a><a
+                class="listItem"><span class="listItemPad">T</span></a><a
+                class="listItem"><span class="listItemPad">U</span></a><a
+                class="listItem"><span class="listItemPad">V</span></a><a
+                class="listItem"><span class="listItemPad">W</span></a><a
+                class="listItem"><span class="listItemPad">X</span></a><a
+                class="listItem"><span class="listItemPad">Y</span></a><a
+                class="listItem"><span class="listItemPad">Z</span></a><a
+                class="listItem"><span class="listItemPad">Other</span></a><a
+                class="listItem listItemLast"><span class="listItemPad">All</span></a></div>
+            <div class="clearingBox"></div>
+            </div>
+            </div>
+            <div class="listBody" id="00BE0000001r0ut_listBody">
+            <div class="exception" id="00BE0000001r0ut_exception"></div>
+            </div>
+            <div class="offPageIds" id="00BE0000001r0ut_offPageIds"></div>
+            </form>
+            <div class="bottomNav" id="00BE0000001r0ut_bottomNav">Loading...</div>
+            </div>
+            <div class="feedContainer" id="00BE0000001r0ut_feedContainer"
+                style="display: none">
+            <div class="feedBody" id="00BE0000001r0ut_feedBody"></div>
+            </div>
+            </div>
+            <script type="text/javascript">chatter.getToolbox().setToken('OEdkSoAdK.jm8lMoiVZc9sBW1AXyQ8W1UI8fO5eNCdKpqAnB1x2xTi0ik32Xeau9i.RGZzKQebwhB5m2gCgPyhryyvaVZuuYfJBBlM_ybssesmyxIFeDb2y3h0wFQMipF6hpjyiAmLqx9nHdElSAyxXvAL8=');</script><script
+                type="text/javascript">window.sfdcPage.appendToOnloadQueue(function() {DevSlide.addTools([{"title":"View Fields","hoverText":"View and manage the fields for this object","newLinkHover":"Add a field to this object","url":"/p/setup/layout/LayoutFieldList?type=Case&setupid=CaseFields","newUrl":"/p/setup/field/NewCustomFieldStageManager?entity=Case&retURL=%2F500%3Ffcf%3D00BE0000001r0ut&setupid=CaseFields","newWindow":true,"newInNewWindow":true,"section":0},{"title":"View Object","hoverText":"View and manage details for this object","newLinkHover":"Create an Object","url":"/ui/setup/Setup?setupid=Case","newUrl":"/01I/e?retURL=%2F500%3Ffcf%3D00BE0000001r0ut&setupid=Case","newWindow":true,"newInNewWindow":false,"section":0},{"title":"View Record Types","hoverText":"View and manage record types for this object","newLinkHover":"Add a record type for this object","url":"/ui/setup/rectype/RecordTypes?type=Case&setupid=CaseRecords","newUrl":"/setup/ui/recordTypeWizard.jsp?type=Case&retURL=%2F500%3Ffcf%3D00BE0000001r0ut&setupid=CaseRecords","newWindow":true,"newInNewWindow":false,"section":0},{"title":"View Validation Rules","hoverText":"View and manage validation rules for this object","newLinkHover":"Add a validation rule for this object","url":"/p/setup/custent/ValidationFormulaListUI/d?retURL=%2F500%3Ffcf%3D00BE0000001r0ut&tableEnumOrId=Case&setupid=CaseValidations","newUrl":"/03d/e?retURL=%2F500%3Ffcf%3D00BE0000001r0ut%26rolodexIndex%3D-1%26page%3D1&TableEnumOrId=Case&Active=1&setupid=CaseValidations","newWindow":true,"newInNewWindow":false,"section":0},{"title":"View Approvals","hoverText":"View and manage approval processes for this object","newLinkHover":"Using the jump start wizard, add an approval process for this object","url":"/p/process/ProcessDefinitionSetup?TableEnumOrId=Case&setupid=ApprovalProcesses","newUrl":"/04a/e?TableEnumOrId=Case&et=QUICK_CREATE&retURL=%2F500%3Ffcf%3D00BE0000001r0ut&setupid=ApprovalProcesses","newWindow":true,"newInNewWindow":false,"section":0},{"title":"Edit App","hoverText":"Customize the tab list, profile assignments, and other details for this app","url":"/02uE0000000JR45/e?retURL=%2F500%3Ffcf%3D00BE0000001r0ut&setupid=TabSet","newWindow":false,"newInNewWindow":false,"section":1},{"title":"Edit Columns","hoverText":"Customize the columns in this list","url":"/ui/list/FilterEditPage?id=00BE0000001r0ut&retURL=%2F500%3Ffcf%3D00BE0000001r0ut&setupid=CaseSearchLayouts","newWindow":false,"newInNewWindow":false,"section":1}]);
+new DevSlide("\u003Cimg src=\"/s.gif\" alt=\"Force.com Quick Access Menu\"  class=\"menuArrow\" onblur=\"this.className = 'menuArrow';\" onfocus=\"this.className = 'menuArrowOn';\" onmouseout=\"this.className = 'menuArrow';\" onmouseover=\"this.className = 'menuArrowOn';\" title=\"Force.com Quick Access Menu\"/\u003E", "\u003Cimg src=\"/s.gif\" alt=\"Go to Setup\"  class=\"forceLogo\" onblur=\"this.className = 'forceLogo';\" onfocus=\"this.className = 'forceLogoOn';\" onmouseout=\"this.className = 'forceLogo';\" onmouseover=\"this.className = 'forceLogoOn';\" title=\"Go to Setup\"/\u003E", "\u003Ca href=\"javascript:openPopupFocusEscapePounds(%27https://help.salesforce.com/apex/htdoor?section=Dev_Tools&amp;target=dev_quick_access_menu.htm&amp;loc=help&amp;language=en_US&amp;release=180.17.2&amp;instance=CS14%27, %27Help%27, 1024, 768, %27width=1024,height=768,resizable=yes,toolbar=yes,status=yes,scrollbars=yes,menubar=yes,directories=no,location=yes,dependant=no%27, false, false);\" class=\"helpLink\" title=\"Help\"\u003E\u003Cimg src=\"/s.gif\" alt=\"Help\"  class=\"helpIcon\" title=\"Help\"/\u003E\u003C/a\u003E", "/setup/forcecomHomepage.apexp?setupid=ForceCom&retURL=%2F500%3Ffcf%3D00BE0000001r0ut");
+});</script> <!-- Body events --> <script type="text/javascript">function bodyOnLoad(){setFocusOnLoad();if (typeof(startSessionTimer)!='undefined') {startSessionTimer(); };if (typeof(ActivityReminder)!='undefined') {ActivityReminder.initialize([], false, false);};if ((window.sfdcPage) && (sfdcPage.executeOnloadQueue)){sfdcPage.executeOnloadQueue();};; if (this.loadChatFrameJs) loadChatFrameJs();new UnifiedSearchAutoCompleteElement("phSearchInput","/_ui/common/search/client/ui/UnifiedSearchAutoCompleteServlet",1,{},true,null,"phSearchForm",["div","searchOwner","asPhrase","sen"],{});new UnifiedSearchButton("searchButtonContainer", "phSearchButton", "headerSearchRightRoundedCornerMouseOver", "phSearchForm");SfdcApp.MruHovers.global_data.url='retURL=%2F500%3Ffcf%3D00BE0000001r0ut&isAjaxRequest=1&renderMode=RETRO&nocache=1355992053202';if (document.getElementById('sidebarDiv')){ Sidebar.prototype.theSidebar = new Sidebar(document.getElementById('sidebarDiv'), true, true,false); };if(window.PreferenceBits){window.PreferenceBits.prototype.csrfToken="8zmcOnaWcs2SLVSsBTjEkuzxYui6mo5hTE9gnRrR3__lnW3EuHP7gbMkDXQtBo32aIlhK3tt2gHnyY9W1_IZNoV9LpcyA2lLeu4f06_Hy_C6xsex9XrUw_Iy2vXFS4HW3dx3Twe2uXJeB.I0UmnwE0UoDnEri4tEdTVeR2Q5Q8.SlErNmGc8hxjlUvaXddpoY995aQ==";};if(window.Jiffy){if(Jiffy.onLoad)Jiffy.onLoad();if(Jiffy.ui&&Jiffy.ui.onLoad)Jiffy.ui.onLoad()}}function bodyOnBeforeUnload(){if ((window.sfdcPage) && (sfdcPage.executeOnBeforeUnloadQueue)){sfdcPage.executeOnBeforeUnloadQueue();};}function bodyOnFocus(){closePopupOnBodyFocus();}function bodyOnUnload(){}</script>
+            <div class="datePicker" id="datePicker">
+            <div class="dateBar"><img src="/s.gif" alt="Previous Month"
+                class="calLeft" onblur="this.className = 'calLeft';"
+                onclick="DatePicker.datePicker.prevMonth();"
+                onfocus="this.className = 'calLeftOn';"
+                onmouseout="this.className = 'calLeft';"
+                onmouseover="this.className = 'calLeftOn';" title="Previous Month" /><select
+                id="calMonthPicker" name="calMonthPicker" title="Month">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select><img src="/s.gif" alt="Next Month" class="calRight"
+                onblur="this.className = 'calRight';"
+                onclick="DatePicker.datePicker.nextMonth();"
+                onfocus="this.className = 'calRightOn';"
+                onmouseout="this.className = 'calRight';"
+                onmouseover="this.className = 'calRightOn';" title="Next Month" /><select
+                id="calYearPicker" name="calYearPicker" title="Year">
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+            </select></div>
+            <div class="calBody">
+            <table class="calDays" border="0" cellpadding="0" cellspacing="0"
+                id="datePickerCalendar">
+                <tr>
+                    <TH class="dayOfWeek" scope="col">Sun</TH>
+                    <TH class="dayOfWeek" scope="col">Mon</TH>
+                    <TH class="dayOfWeek" scope="col">Tue</TH>
+                    <TH class="dayOfWeek" scope="col">Wed</TH>
+                    <TH class="dayOfWeek" scope="col">Thu</TH>
+                    <TH class="dayOfWeek" scope="col">Fri</TH>
+                    <TH class="dayOfWeek" scope="col">Sat</TH>
+                </tr>
+                <tr class="calRow" id="calRow1">
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                </tr>
+                <tr class="calRow" id="calRow2">
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                </tr>
+                <tr class="calRow" id="calRow3">
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                </tr>
+                <tr class="calRow" id="calRow4">
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                </tr>
+                <tr class="calRow" id="calRow5">
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                </tr>
+                <tr class="calRow" id="calRow6">
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                    <td onblur="hiOff(this);"
+                        onclick="DatePicker.datePicker.selectDate(this);"
+                        onfocus="hiOn(this);" onmouseout="hiOff(this);"
+                        onmouseover="hiOn(this);">&nbsp;</td>
+                </tr>
+            </table>
+            -->
+            <div class="buttonBar"><a href="javascript:%20void%280%29%3B"
+                class="calToday"
+                onclick="DatePicker.datePicker.selectDate('today');return false;">Today</a></div>
+            </div>
+            </div>
+            <!-- End page content --></td>
+        </tr>
+    </table>
+    </div>
+    <div class="bPageFooter noTableFooter">
+    <div>Copyright © 2000-2012 salesforce.com, inc. All rights
+    reserved.&nbsp;|&nbsp;<a
+        href="http://www.salesforce.com/company/privacy.jsp" target="_blank"
+        title="Privacy Statement (New Window)">Privacy Statement</a>&nbsp;|&nbsp;<a
+        href="http://www.salesforce.com/company/security.jsp" target="_blank"
+        title="Security Statement (New Window)">Security Statement</a>&nbsp;|&nbsp;<a
+        href="http://www.salesforce.com/company/msa.jsp" target="_blank"
+        title="Terms of Use (New Window)">Terms of Use</a>&nbsp;|&nbsp;<a
+        href="https://help.salesforce.com/apex/htdoor?loc=help&amp;target=accessibility_overview.htm&amp;section=accessibility&amp;language=en_US&amp;release=180.17.2&amp;instance=CS14"
+        target="_blank" title="508 Compliance (New Window)">508 Compliance</a></div>
+    </div>
+    <div></div>
+    </div>
+    <span class="rcCatcher" id="rcCatcher"></span>
+    <span class="rcCatcher2" id="rcCatcher2"></span>
+    <script defer="true"
+        src="/jslibrary/1351189248000/sfdc/ChatterDefer.js"
+        type="text/javascript"></script>
+    </form>
+    </body>
+    </html>
+    <!-- page generation time: 263ms -->
+</apex:page>

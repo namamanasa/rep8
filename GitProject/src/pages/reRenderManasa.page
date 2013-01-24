@@ -1,0 +1,12 @@
+<apex:page controller="reRenderManasa">
+  <apex:form >
+      <apex:outputPanel id="first" rendered="{!!first}">
+          <apex:outputText >First Page</apex:outputText>
+          <apex:commandButton value="Move to second Page" action="{!save1}" />
+      </apex:outputPanel>
+      <apex:outputPanel id="second" rendered="{!first}">
+          <apex:outputText >Second Page</apex:outputText>
+          <apex:commandButton value="Move to first Page" action="{!save2}" />
+      </apex:outputPanel>
+  </apex:form>
+</apex:page>

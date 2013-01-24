@@ -1,0 +1,46 @@
+<apex:page controller="response_xml">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!book}" var="b">
+                    <apex:column value="{!b.programType}" headerValue="programType"/>
+                    <apex:column value="{!b.programVersion}" headerValue="programVersion"/>
+                    <apex:column value="{!b.programOrga}" headerValue="programOrgae"/>
+                    <apex:column value="{!b.programGPA}" headerValue="programGPA"/>
+                    <apex:column value="{!b.programRequiredCredits}" headerValue="programRequiredCredits"/>
+                    <apex:column value="{!b.programCompletedCredits}" headerValue="programCompletedCreditse"/>
+                    <apex:column value="{!b.programRemainingCredits}" headerValue="programRemainingCredits"/>
+                    <apex:column value="{!b.programPercentComplete}" headerValue="programPercentComplete"/>
+                    <apex:column value="{!b.programAcademicStatus}" headerValue="programAcademicStatus"/>
+                    <apex:column value="{!b.programAcademicStatusDate}" headerValue="programAcademicStatusDate"/>
+                    <apex:column value="{!b.studentAcademicStatus}" headerValue="studentAcademicStatu"/>
+                    <apex:column value="{!b.studentAcademicStatusDate}" headerValue="studentAcademicStatusDate"/>
+                    <apex:column value="{!b.programCompleteDate}" headerValue="programCompleteDate"/>
+                    <apex:column value="{!b.primaryProgram}" headerValue="primaryProgram"/>
+                    <apex:column value="{!b.enrollmentStatusType}" headerValue="enrollmentStatusType"/>
+                    <apex:column value="{!b.withdrawalDateofDetermination}" headerValue="withdrawalDateofDetermination"/>
+                    <apex:column value="{!b.withdrawalType}" headerValue="withdrawalType"/>
+                    
+                     <apex:column value="{!b.programEnrollmentStatusType}" headerValue="programEnrollmentStatusType"/>
+                    <apex:column value="{!b.programWithdrawalDateofDetermination}" headerValue="programWithdrawalDateofDetermination"/>
+                    <apex:column value="{!b.programWithdrawalType}" headerValue="programWithdrawalType"/>
+                    
+					<apex:column value="{!b.firstName}" headerValue="firstName"/>
+                    <apex:column value="{!b.middleName}" headerValue="middleName"/>
+                    <apex:column value="{!b.lastName}" headerValue="lastName"/>
+                    <apex:column value="{!b.roleCodee}" headerValue="roleCodee"/>
+                	<apex:column value="{!b.emailAddres}" headerValue="emailAddres"/>
+                    <apex:column value="{!b.phoneAreaCode}" headerValue="phoneAreaCode"/>
+                    <apex:column value="{!b.faxAreaCode}" headerValue="faxAreaCode"/>
+                    <apex:column value="{!b.faxNumber}" headerValue="faxNumber"/>
+                    <apex:column value="{!b.lastStudentAcademicRelatedActivity}" headerValue="lastStudentAcademicRelatedActivity"/>
+                    <apex:column value="{!b.lastProgramAcademicRelatedActivity}" headerValue="lastProgramAcademicRelatedActivity"/>
+             
+                </apex:pageBlockTable>  
+            </apex:pageBlockSection>
+        </apex:pageBlock> 
+        
+       <!-- ---------------------------------------------------------- -->
+    </apex:form>
+    
+</apex:page>

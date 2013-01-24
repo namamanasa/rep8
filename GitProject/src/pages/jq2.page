@@ -1,0 +1,30 @@
+<apex:page >
+  <html>
+<head>
+<apex:includeScript value="{!URLFOR($Resource.jquery2, '/js/jquery-1.7.1.min.js')}"  />
+<apex:includeScript value="{!URLFOR($Resource.jquery2, '/js/jquery-ui-1.8.17.custom.min.js')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.jquery2, '/css/ui-lightness/jquery-ui-1.8.6.custom.css')}"  />
+
+
+<script type="text/javascript" >
+$(document).ready(function(){
+  $("button").click(function(){
+  
+  
+ 
+  
+    $("p").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+</html>
+
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page controller="AdmissionController">
+ <apex:form >
+     <apex:pageBlock >
+     <apex:pageBlockSection title="Payment Information">
+                <apex:selectList Label="Are you planning on applying for counselor- approved fee waiver?" size="1">
+                    <apex:selectOption ItemValue="Yes" ItemLabel="yes"/>
+                    <apex:selectOption ItemValue="No" ItemLabel="No"/>
+                </apex:selectList>
+                <apex:selectList Label="Are you applying for financial aid?" size="1">
+                    <apex:selectOption ItemValue="Yes" ItemLabel="yes"/>
+                    <apex:selectOption ItemValue="No" ItemLabel="No"/>
+                </apex:selectList>
+                <apex:inputText Label="If applying for financial aid,when did/will you file the appropriate forms?" id="PaymentDateId" onfocus="DatePicker.PickDate(true,'{!$Component.PaymentDateId}',false)"/>
+            </apex:pageBlockSection>
+             <apex:pageBlockButtons >
+                <apex:commandButton action="{!step1}" value="Previous"/>
+                <apex:commandButton action="{!step3}" value="Next"/>
+              <!--  <apex:commandButton action="{!cancel}" value="Cancel"  onclick="return confirmCancel()" immediate="true"/>-->
+              </apex:pageBlockButtons>
+            
+            </apex:pageBlock>
+ </apex:form>
+</apex:page>

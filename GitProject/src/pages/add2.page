@@ -1,0 +1,66 @@
+<apex:page >
+ 
+ <apex:sectionHeader title="Addition"/>
+
+ <script>
+ function additionval()
+ {
+ var x=document.getElementById("{!$Component.form1.pageblock1.pageblocksection1.pageblocksectionitem1.ia1}").value;
+ var y=document.getElementById("{!$Component.form1.pageblock2.pageblocksection2.pageblocksectionitem2.ia2}").value;
+
+ x=x*1;
+ y=y*1;
+ var z=x+y;
+  document.getElementById("{!$Component.form1.pageblock3.pageblocksection3.pageblocksectionitem3.ia3}").value=z;
+ 
+  return z;
+ 
+ }
+ </script>
+ 
+ <apex:form id="form1">
+ 
+ <apex:pageBlock id="pageblock1">
+ <apex:pageBlockSection id="pageblocksection1">
+ <apex:pageBlockSectionItem id="pageblocksectionitem1" >
+ <apex:outputLabel value="Enter first num"></apex:outputLabel>
+ <apex:inputText id="ia1"  />
+ </apex:pageBlockSectionItem>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ 
+ 
+ <apex:pageBlock id="pageblock2">
+ <apex:pageBlockSection id="pageblocksection2">
+ <apex:pageBlockSectionItem id="pageblocksectionitem2" >
+ <apex:outputLabel value="Enter second num"></apex:outputLabel>
+ <apex:inputText id="ia2" />
+ </apex:pageBlockSectionItem>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ 
+ 
+ <apex:pageBlock id="pageblock3">
+ <apex:pageBlockSection id="pageblocksection3">
+ <apex:pageBlockSectionItem id="pageblocksectionitem3" >
+ <apex:outputLabel value="The result is"></apex:outputLabel>
+ <apex:inputText id="ia3"/>
+ </apex:pageBlockSectionItem>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ 
+
+ 
+ 
+ <apex:pageBlock id="pageblock4">
+ <apex:pageBlockSection id="pageblocksectionion">
+ <apex:pageBlockSectionItem id="pageblocksectionitem4" >
+<apex:commandButton value="ADD"  onclick="additionval()"/>
+ </apex:pageBlockSectionItem>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ </apex:form>
+ 
+ 
+ 
+</apex:page>

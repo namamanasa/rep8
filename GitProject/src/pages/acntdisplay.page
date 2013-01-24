@@ -1,0 +1,5 @@
+<apex:page >
+<apex:outputLink value="http://developer.force.com/">Click me!</apex:outputLink>
+
+
+</apex:page>

@@ -1,0 +1,21 @@
+<apex:page controller="AdmissionController">
+ <apex:form >
+     <apex:pageBlock >
+    
+           
+              <apex:pageBlockSection title="Employment Information">
+                <apex:inputText Label="Employer"/>
+                <apex:inputTextArea Label="Job Description"/>
+                <apex:inputText Label="Start Date" id="EmployeeStartDateId1" onfocus="DatePicker.PickDate(true,'{!$Component.EmployeeStartDateId1}',false)" />
+                <apex:inputText Label="End Date" id="EmployeeEndDateId1" onfocus="DatePicker.PickDate(true,'{!$Component.EmployeeEndDateId1}',false)"/>
+                
+            </apex:pageBlockSection>
+          <apex:pageBlockButtons >
+       
+          <apex:commandButton action="{!step2}" value="Previous"
+                              />
+        
+            </apex:pageBlockButtons>
+            </apex:pageBlock>
+ </apex:form>
+</apex:page>

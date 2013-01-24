@@ -1,0 +1,59 @@
+<apex:page >
+
+
+  <html>
+<head>
+<apex:includeScript value="{!URLFOR($Resource.slider, '/js/jquery.js')}"  />
+<apex:includeScript value="{!URLFOR($Resource.slider, '/js/easySlider.js')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.jquery2, '/css/ui-lightness/jquery-ui-1.8.6.custom.css')}"  />
+
+
+<script type="text/javascript" >
+
+
+#slider ul, #slider li{
+    margin:0;
+    padding:0;
+    list-style:none;
+    }
+#slider, #slider li{ 
+    width:500px;
+    height:200px;
+    overflow:hidden; 
+    }
+span#prevBtn{}
+span#nextBtn{}  
+$(document).ready(function(){
+ $("#slider").easySlider({
+        prevText: 'Previous Slide',
+        nextText: 'Next Slide',
+        orientation: 'vertical'
+    });
+   
+ 
+});
+<span id="prevId"><a href="javascript:void(0);">Previous</a></span> 
+<span id="nextBtn"><a href="javascript:void(0);">Next</a></span>
+
+</script>
+</head>
+
+<body>
+
+
+<div id="slider">
+    <ul>
+
+
+    <li>content here...</li>
+    <li>content here...</li>
+    <li>content here...</li>
+
+    </ul>
+
+</div>
+
+</body>
+</html>
+
+</apex:page>

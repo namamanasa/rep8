@@ -1,0 +1,17 @@
+<apex:page standardController="account">
+ 
+<ul>
+<apex:repeat value="{!account.contacts}" var="item">
+<li><apex:outputText value="{!item.name}"/></li>
+
+
+</apex:repeat>
+
+<apex:repeat value="{!account.contacts}" var="item">
+<li><apex:outputText value="{!item.email}"/></li>
+
+
+</apex:repeat>
+
+</ul>
+</apex:page>

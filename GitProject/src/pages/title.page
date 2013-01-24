@@ -1,0 +1,14 @@
+<apex:page sidebar="false">
+<apex:pageBlock title="page block heading"  >
+<apex:pageBlockSection title="page block section title">
+{! $User.FirstName & ' .............' & $User.LastName}
+<p> Today date is{!Today()}</p>
+
+<p> {!max(10,8,15,9)}</p>
+<p> {!day(today())}</p>
+<p>{!sqrt(49)}</p>
+<p> {!contains('manasa','asa')}</p>
+<p> {!if(contains('bhavani','nani'),'contains','not contains')}</p>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

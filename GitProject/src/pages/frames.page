@@ -1,0 +1,25 @@
+<apex:page >
+<style type="text/css">
+  .left_panel{width:215px; margin:0 10px 0 0; float:left;}
+  .right_panel{margin: 0 0 0 225px;}
+  .right_panel .Custom9Block {width:100% !important; float:left !important;}
+  .right_panel .Custom9Block .tertiaryPalette {boder:0; border-top:2px solid #94B9D1!important; color:#27282E!important;}
+   body .right_panel .Custom9Block .bPageBlock .pbBody .pbSubheader .hideListButton {background:url("F:\wallpapers\p1.jpeg") no-repeat scroll 0 -11px transparent !important;}
+   body .right_panel .Custom9Block .bPageBlock .pbBody .pbSubheader .showListButton {background:url("F:/wallpapers/p2.png") no-repeat scroll 1px -1px transparent !important;}
+       
+  </style>
+  
+  <div style="float:left; width:100%">
+  
+      <div class="left_panel">
+      <apex:outputText value="Left panel"></apex:outputText>
+      </div>
+      
+      <div class="right_panel">
+      <apex:outputText value="Right panel"></apex:outputText>
+      </div>
+      
+  </div>
+
+
+</apex:page>

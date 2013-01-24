@@ -1,0 +1,156 @@
+<apex:page controller="MyPositionController1">
+<script>
+        function validateTitle(){
+            var title=document.getElementById("{!$Component.form1.block.blocksection1.blocksectionitem1.titleid}").value;
+            if(title==''){
+              alert("must enter the Position Title.");
+                alert(location.href);
+        
+              
+            }
+        }
+        function validateMinMax(){
+            var min=document.getElementById("{!$Component.form1.block.blocksection2.blocksectionitem12.minpayid}").value;
+            var max=document.getElementById("{!$Component.form1.block.blocksection2.blocksectionitem13.maxpayid}").value;
+            if(min>max){
+                alert("minpay should be lesser than maxpay.");
+            }
+            
+        }
+        
+   
+        
+ </script>
+    <apex:sectionHeader title="Position Edit" subtitle="New Position"/>
+    <apex:form id="form1">
+    <apex:pageMessages ></apex:pageMessages>
+    
+            <apex:pageBlock title="Position Edit" mode="edit" id="block">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="save"/>
+                <apex:commandButton action="{!savenew}" value="save & new"/>
+                <apex:commandButton value="cancel" onclick="goBack()"/>
+            </apex:pageBlockButtons>   
+            <apex:pageBlockSection title="Information" id="blocksection1">
+               <apex:pageBlockSectionItem id="blocksectionitem1">
+                    <apex:outputLabel value="Position Title" for="titleid"/>
+                    <apex:inputText id="titleid" value="{!positiontitle}" size="20" onblur="validateTitle()"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem2">
+                    <apex:outputLabel value="Owner"/>{!$User.FirstName & ' ' & $User.LastName}
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem3">
+                    <apex:outputLabel value="Status" for="statusid"/>
+                    <apex:selectList id="statusid" value="{!status}" size="1">
+                        <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                        <apex:selectOption itemvalue="New Position" itemLabel="New Position"/>
+                        <apex:selectOption itemValue="Pending Approval" itemLabel="Pending Approval"/>
+                        <apex:selectOption itemValue="Open - Approved" itemLabel="Open - Approved"/>
+                        <apex:selectOption itemValue="Closed - Filled" itemLabel="Closed - Filled"/>
+                        <apex:selectOption itemValue="Closed - Not Approved" itemLabel="Closed - Not Approved"/>
+                        <apex:selectOption itemValue="Closed - Canceled" itemLabel="Closed - Canceled"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem4">
+                    <apex:outputLabel value="Location" for="locationid"/>
+                    <apex:selectList id="locationid" value="{!location}" size="1">
+                        <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                        <apex:selectOption itemvalue="San Francisco, CA" itemLabel="San Francisco, CA"/>
+                        <apex:selectOption itemValue="Austin,TX" itemLabel="Austin,TX"/>
+                        <apex:selectOption itemValue="Boulder, CO" itemLabel="Boulder, CO"/>
+                        <apex:selectOption itemValue="London, England" itemLabel="London, England"/>
+                        <apex:selectOption itemValue="New York, NY" itemLabel="New York, NY"/>
+                        <apex:selectOption itemValue="Mumbai, India" itemLabel="Mumbai, India"/>
+                        <apex:selectOption itemValue="Sydney, Australia" itemLabel="Sydney, Australia"/>
+                        <apex:selectOption itemValue="Tokyo, Japan" itemLabel="Tokyo, Japan"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem5">
+                    <apex:outputLabel value="Type" for="typeid"/>
+                    <apex:selectList id="typeid" value="{!type}" size="1">
+                        <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                        <apex:selectOption itemValue="Full Time" itemLabel="Full Time"/>
+                        <apex:selectOption itemValue="Part Time" itemLabel="Part Time"/>
+                        <apex:selectOption itemValue="Internship" itemLabel="Internship"/>
+                        <apex:selectOption itemValue="Contractor" itemLabel="Contractor"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem6">
+                    <apex:outputLabel value="Open Date" for="opendateid"/>
+                    <apex:inputText id="opendateid" value="{!opendate}" size="15" onfocus="DatePicker.pickDate(true,'{!$Component.opendateid}',false);"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem7">
+                    <apex:outputLabel value="Functional Area" for="fareaid"/>
+                    <apex:selectList id="fareaid" value="{!functionalarea}" size="1">
+                        <apex:selectOptions value="{!fareas}"/>
+                        <apex:actionSupport event="onchange" reRender="{!joblevel}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem8">
+                    <apex:outputLabel value="Hire By" for="hirebyid"/>
+                    <apex:inputText id="hirebyid" value="{!hireby}" size="15" onfocus="DatePicker.pickDate(true,'{!$Component.hirebyid}',false);"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem9">
+                    <apex:outputLabel value="Job Level" for="joblevelid"/>
+                    <apex:selectList id="joblevelid" value="{!joblevel}" size="1" disabled="{!joboption}">
+                        <apex:selectOptions value="{!joblevels}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem10">
+                    <apex:outputLabel value="Close Date" for="closedateid"/>
+                    <apex:inputText id="closedateid" value="{!closedate}" size="15" onfocus="DatePicker.pickDate(true,'{!$Component.closedateid}',false);"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem11">
+                    <apex:outputLabel value="Travel Required" for="travelid"/>
+                    <apex:inputCheckbox id="travelid"  value="{!travelrequired}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Compensation" id="blocksection2">
+                <apex:pageBlockSectionItem id="blocksectionitem12">
+                    <apex:outputLabel value="Min Pay" for="minpayid"/>
+                    <apex:inputText id="minpayid" value="{!minpay}" onblur="validateMinMax()"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem13">
+                    <apex:outputLabel value="Max Pay" for="maxpayid"/>
+                    <apex:inputText id="maxpayid" value="{!maxpay}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Description" columns="1" id="blocksection3">
+                <apex:pageBlockSectionItem id="blocksectionitem14">
+                    <apex:outputLabel value="Job Description" for="descriptionid"/>
+                    <apex:inputTextarea id="descriptionid" value="{!jobdescription}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem15">
+                    <apex:outputLabel value="Responsibilities" for="resid"/>
+                    <apex:inputTextarea id="resid" value="{!responsibilities}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem16">
+                    <apex:outputLabel value="Skills Required" for="skillsid"/>
+                    <apex:inputTextarea id="skillsid" value="{!skillsrequired}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem17">
+                    <apex:outputLabel value="Educational Requirements" for="eduid"/>
+                    <apex:inputTextarea id="eduid" value="{!educationalrequirements}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Required Languages" id="blocksection4">
+                <apex:pageBlockSectionItem id="blocksectionitem18">
+                    <apex:outputLabel value="Java" for="javaid"/>
+                    <apex:inputCheckbox id="javaid" value="{!java}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem19">
+                    <apex:outputLabel value="JavaScript" for="jsid"/>
+                    <apex:inputCheckbox id="jsid" value="{!javascript}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem20">
+                    <apex:outputLabel value="C#" for="cid"/>
+                    <apex:inputCheckbox id="cid" value="{!c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="blocksectionitem21">
+                    <apex:outputLabel value="Apex" for="apexid"/>
+                    <apex:inputCheckbox id="apexid" value="{!apex}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

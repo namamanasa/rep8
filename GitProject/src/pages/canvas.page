@@ -1,0 +1,42 @@
+<apex:page standardController="Account" docType="html">
+  
+<apex:includeScript value="/support/console/25.0/integration.js"/>
+  <script>
+  var var_primaryTabId;
+  var var_subtabName;
+  function redirect(){
+      if ('{!$CurrentPage.parameters.redirected}' != 'true'){
+          //window.location.href='{!$CurrentPage.URL}'+'?redirected=true';
+          testOpenSubtab();
+      } 
+  }
+  function testOpenSubtab() {
+    //First find the ID of the primary tab to put the new subtab in
+    sforce.console.getEnclosingPrimaryTabId(openSubtab);
+  }
+  var openSubtab = function openSubtab(result) {
+    //Now that we haveve got the primary tab ID, we can open a new subtab in it
+    var primaryTabId = result.id;
+    var_primaryTabId = primaryTabId;
+    var_subtabName = 'Mind Map';
+    sforce.console.openSubtab(primaryTabId , '{!$CurrentPage.URL}'+'&redirected=true', false, var_subtabName, null, openSuccess, 'MindMap');
+    
+    };
+    var openSuccess = function openSuccess(result) {
+    //Report whether we succeeded in opening the subtab
+    if (result.success == true) {
+        sforce.console.focusSubtabByNameAndPrimaryTabId(var_subtabName, primaryTabId);
+    } else {
+    alert('Mind Map could not be opened');
+    }
+    };
+    
+   
+  </script>
+ 
+
+  <div>
+  <c:mindmap1 ></c:mindmap1>
+  
+  </div>
+</apex:page>

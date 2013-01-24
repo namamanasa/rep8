@@ -1,0 +1,21 @@
+<apex:page controller="posdisplay" >
+<apex:pageBlock >
+    <apex:pageBlockTable value="{!pos1}" var="pos">
+        <apex:column value="{!pos.Name}"/>
+         <apex:column value="{!pos.Max_Pay__c}"/>
+        <apex:column value="{!pos.Min_Pay__c}"/>
+        <apex:column value="{!pos.Status__c}"/>
+
+        <apex:column value="{!pos.Name}"/>
+     </apex:pageBlockTable>
+</apex:pageBlock>
+    <!--<apex:dataList value="{!pos1}" var="pos" id="theList">
+
+        <apex:outputText value="{!pos.Name}"/>
+        <apex:outputText value="{!pos.Max_Pay__c}"/>
+        <apex:outputText value="{!pos.Min_Pay__c}"/>
+        <apex:outputText value="{!pos.Status__c}"/>
+
+    </apex:dataList>-->
+
+</apex:page>

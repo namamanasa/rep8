@@ -1,0 +1,440 @@
+<apex:page controller="JqueryTestClass">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" 
+            rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js">
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+    <style type="text/css">
+        .custPopup
+        {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground
+        {
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+        body 
+        {
+            background-color: #FFCC66;
+        }
+    </style>
+    <apex:form >
+        <div style="background-color:#CCC;">
+        <html>
+            
+            <body>
+                <b>
+                    <apex:outputLabel value="Self Scheduling" for="Sevrty" 
+                        style="font-family:verdana;font-family:verdana;position:relative;
+                            left:0px;top:5px;height:300px;width:300px">
+                    </apex:outputLabel>
+                </b>
+                <br>
+                </br>
+                <b>
+                    <apex:outputLabel value="Program: Business Adminstration v.011A" for="Sevrty" 
+                        style="font-family:verdana;font-family:verdana;position:relative;
+                            left:0px;top:5px;height:300px;width:300px">
+                    </apex:outputLabel>
+                </b>
+                <br>
+                </br>
+                
+                <div>
+                    <table cellspacing="5" border="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <div>
+                                    <b style="font-family:verdana;color:green;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                        25%
+                                    </b>
+                                    <b style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                        Completed
+                                    </b>
+                                    <br>
+                                    </br>
+                                    <apex:outputtext value="See my program outline >>" 
+                                        style="font-family:verdana;position:relative;color:blue;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                </div>
+                            </td>
+                            
+                            <td width="50">
+                            </td>
+                            
+                            <td width="1" bgcolor="#000000" height="6"></td>
+                            
+                            <td>
+                                <apex:outputtext value="Total credits Required: 60   Program GPA: 3.89"
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                </apex:outputtext>
+                                <br>
+                                </br>
+                                <apex:outputtext value="Credits Remaining: 60     Program Credits: 3.89" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                </apex:outputtext>
+                                <br>
+                                </br>
+                                <apex:outputtext value="Program Contact and Academic Statuses" 
+                                        style="font-family:verdana;position:relative;color:blue;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                </apex:outputtext>
+                                <br>
+                                </br>
+                                <b>
+                                    <apex:outputtext value="Program Contacts" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                </b>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="Academic Representative" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                                <b>
+                                    <apex:outputtext value="Jane Shaw" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                </b>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="9963777529" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="9963777529-Fax" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="suddarraju@360vantage.com" 
+                                        style="font-family:verdana;position:relative;
+                                        color:blue;left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                            </td>
+                            <td>
+                                <br>
+                                </br>
+                                <br>
+                                </br>
+                                <br>
+                                </br>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="Financial Adviser" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                                <b>
+                                    <apex:outputtext value="Jane Shaw" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                </b>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="9963777529" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="9963777529-Fax" 
+                                        style="font-family:verdana;position:relative;
+                                        left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                                    <apex:outputtext value="suddarraju@360vantage.com" 
+                                        style="font-family:verdana;position:relative;
+                                        color:blue;left:0px;top:5px;height:300px;width:300px">
+                                    </apex:outputtext>
+                                <br>
+                                </br>
+                            </td>
+                            <td>
+                                <br>
+                                </br>
+                                <br>
+                                </br>
+                                <br>
+                                </br>
+                                    <span>  
+                                        <table cellspacing="5" border="0" cellpadding="0">
+                                            <tr>
+                                                <td width="1" bgcolor="#000000" height="6"></td>
+                                                <td>
+                                                    <b>                     
+                                                    <apex:outputtext value="Acadamic Statuses" 
+                                                        style="font-family:verdana;position:relative;
+                                                        left:0px;top:5px;height:300px;width:300px">
+                                                    </apex:outputtext>
+                                                    </b>
+                                                    <br>
+                                                    </br>
+                                                    <apex:outputtext value="Student: Reguler(RG)" 
+                                                        style="font-family:verdana;position:relative;
+                                                        left:0px;top:5px;height:300px;width:300px">
+                                                    </apex:outputtext>
+                                                    <br>
+                                                    </br>
+                                                    <apex:outputtext value="Program: Reguler(RG)" 
+                                                        style="font-family:verdana;position:relative;
+                                                        left:0px;top:5px;height:300px;width:300px">
+                                                    </apex:outputtext>
+                                                    <br>
+                                                    </br>
+                                                    <apex:outputtext value="Financial AID: Reguler(RG)" 
+                                                        style="font-family:verdana;position:relative;
+                                                        left:0px;top:5px;height:300px;width:300px">
+                                                    </apex:outputtext>
+                                                    <br>
+                                                    </br>
+                                                    <br>
+                                                    </br>
+                                                    <br>
+                                                    </br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </span>
+                                </td>
+                                
+                            </tr>
+                        </table>    
+                        <hr/>
+                    </div>
+                    <apex:outputpanel >
+                        <div align="left">
+                            <apex:commandbutton value="Add A Course" 
+                                styleClass="button" action="{!showPopup}" rerender="tstpopup">
+                            </apex:commandbutton>
+                            <apex:commandbutton value="Schedule A Break" 
+                                styleClass="button" action="{!showPopup}" rerender="tstpopup">
+                            </apex:commandbutton>&nbsp;&nbsp;&nbsp;
+                            <font size="2pt" family="verdana">
+                                <apex:outputLabel value="Estimated Graduation Date: 12/12/2011"/>
+                            </font>
+                        </div>
+                    </apex:outputpanel>
+                    <apex:outputPanel id="tstpopup">
+                        <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+                        <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+                            This is where I would put whatever information I needed to show to my end user.
+                            <br/>
+                            <br/>
+                            <br/>
+                            <apex:commandButton value="Hide Pop up" action="{!closePopup}" rerender="tstpopup"/>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </body> 
+            </html>
+            <br/>
+            <br/>
+            <script src="http://code.jquery.com/jquery.min.js"></script>
+            
+            <html>
+                <head>
+                    <script type="text/javascript" src="jquery.js"></script>
+                    <script type="text/javascript"> 
+                        
+                        $(document).ready(function()
+                        {
+                            $("#flip1").click(function()
+                            {
+                                $("#panel1").show(1000);
+                                $("#panel").hide(1000);
+                                
+                            });
+                        });
+                        
+                        $(document).ready(function()
+                        {
+                            $("#flip").click(function()
+                            {
+                                $("#panel").show(1000);
+                                $("#panel1").hide(1000);
+                                
+                            });
+                        });
+                        
+                        $(window).load(function()
+                       {
+                          $("#panel1").show(1000);
+                       });
+                        
+                     
+                    </script>
+                    <style type="text/css"> 
+                        
+                        .panel,.flip
+                        {
+                            margin:0px;
+                            padding:1px;
+                            text-align:left;
+                            background:#CCC;
+                            border:solid 1px #c3c3c3;
+                        }
+                        
+                        div.panel1,p.flip1
+                        {
+                            margin:0px;
+                            padding:1px;
+                            text-align:left;
+                            background:#CCC;
+                            border:solid 1px #c3c3c3;
+                        }
+                        
+                        div.panel
+                        {
+                            height:350px;
+                            width:1100px;
+                            display:none;
+                            overflow:hidden;
+                            overflow-x:scroll;
+                            overflow-y:hidden;
+                            
+                        }
+                        
+                        div.panel1
+                        {
+                            height:350px;
+                            width:1100px;
+                            display:none;
+                            overflow:hidden;
+                            overflow-x:scroll;
+                            overflow-y:hidden;
+                        }
+                        
+                    </style>
+                </head>
+                <body >
+                    <div class="panel" id="panel">
+                        <p>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Acadamic Year One </b></div>
+                                <table cellspacing="10" border="0" cellpadding="30">
+                                    <tr>
+                                        <apex:repeat value="{!AccountDetails}" var="AccountData" >
+                                        <td bgcolor="white">
+                                            {!AccountData.AccountName}
+                                            <font color="blue">
+                                            {!AccountData.AccountNumber}
+                                            </font>
+                                            <br/>
+                                            <font color="Green" size="6px" family="verdana">
+                                            <b>A</b>
+                                            </font>
+                                            <hr/>
+                                            <font size="1px">
+                                            Started:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12/12/2011<br/>
+                                            Completed:12/12/2011    
+                                            </font>
+                                            <hr/>    
+                                            <font color="Green" size="2px" family="verdana">
+                                            <b>Action >></b>
+                                            </font>                                 
+                                        </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                </p>
+                    </div>
+                    
+                    
+                    <div class="panel1" id="panel1">
+                        <p>
+                        <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Acadamic Year Two </b></div>
+                                
+                                <table cellspacing="10" border="0" cellpadding="30">
+                                    <tr>
+                                        <apex:repeat value="{!AccountDetails}" var="AccountData" >
+                                        <td bgcolor="white">
+                                            {!AccountData.AccountName}
+                                            <font color="blue">
+                                            {!AccountData.AccountNumber}
+                                            </font>
+                                            <br/>
+                                            <font color="Green" size="6px" family="verdana">
+                                            <b>A</b>
+                                            </font>
+                                            <hr/>
+                                            <font size="1px">
+                                            Started:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12/12/2011<br/>
+                                            Completed:12/12/2011    
+                                            </font>
+                                            <hr/>    
+                                            <font color="Green" size="2px" family="verdana">
+                                            <b>Action >></b>
+                                            </font>                                 
+                                        </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                </p>
+                                <a id="Previous"> Previous</a>
+                                
+                    </div>
+                    
+                    <a class="flip" id="flip"> <b>Semister One</b></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="flip1" id="flip1"><b>Semister Two</b></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a><b>Semister Three</b></a>
+                </body>
+            </html>
+            </div>
+        </apex:form>
+    </apex:page>

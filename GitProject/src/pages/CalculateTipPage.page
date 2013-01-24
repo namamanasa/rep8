@@ -1,0 +1,7 @@
+<!--<apex:page>
+<flow:interview name="Calculate_Tip" finishLocation="{!URLFOR('/home/home.jsp')}" />
+</apex:page> -->
+
+<apex:page >
+<flow:interview name="Calculate_Tip" finishLocation="{!URLFOR('/a09/o')}" />
+</apex:page>

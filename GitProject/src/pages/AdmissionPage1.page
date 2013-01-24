@@ -1,0 +1,22 @@
+<apex:page controller="AdmissionController">
+ <apex:form >
+     <apex:pageBlock >
+    
+             <apex:pageBlockSection title="Intial">
+                <apex:inputTextArea Label="College Name"/>
+                <apex:inputText Label="I am Applying For Term Beginning" id="InitialDateId" onfocus="DatePicker.PickDate(true,'{!$Component.InitialDateId}',false)"/>
+                <apex:inputText Label="Possible Major"/>
+                <apex:inputTextArea Label="Possible Career Plans"/>
+                <apex:inputCheckbox Label="Regular Decision"/>
+                <apex:inputCheckbox Label="Restrictive Early Decision"/>
+                <apex:inputCheckbox Label="Early Decision"/>
+                <apex:inputCheckbox Label="Early Action"/>
+                 </apex:pageBlockSection>
+                    <apex:pageBlockButtons >
+                     <apex:commandButton action="{!step2}" value="Next"/>
+                     </apex:pageBlockButtons>
+               
+              
+            </apex:pageBlock>
+ </apex:form>
+</apex:page>

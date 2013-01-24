@@ -1,0 +1,32 @@
+<apex:page showHeader="false" standardStylesheets="false">
+ 
+    
+<script>
+
+.mov
+{
+ padding-left:500px;
+}
+
+</script>
+<div style="background-color:#cdc9c9;position:relative">
+  <apex:pageBlock title="killo" >
+  <apex:pageBlockSection columns="2">
+  <apex:pageBlockSectionItem dataStyleClass="mov" >
+ 
+ 
+  <apex:panelGrid border="0" bgcolor="white" width="100px">
+  <apex:outputText value="lear"/>
+ 
+  <br/>
+  <br/>
+  <apex:outputText value="jerry"/>
+
+  </apex:panelGrid>
+  </apex:pageBlockSectionItem>
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  
+  </div>
+  
+</apex:page>

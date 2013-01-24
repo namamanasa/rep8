@@ -1,0 +1,25 @@
+<apex:page standardController="Account" extensions="renderexample">
+    <apex:form >
+          <apex:pageBlock >
+              
+              <apex:pageBlockSection columns="1" >
+                  
+                  <apex:pageBlockSectionItem >
+                      <apex:panelGrid columns="5" id="theGrid">
+                          <apex:outputText >Search</apex:outputText>
+                          <apex:inputText value="{!sText}"/>
+                          <apex:commandButton value="go" action="{!doProcess}"/>
+                      </apex:panelGrid>       
+                  </apex:pageBlockSectionItem>
+                  
+        <apex:pageBlockTable value="{!Data}" var="item" rendered="{!showResults}">
+            <apex:column value="{!item.name}"/>
+            <apex:column value="{!item.phone}"/>
+         
+                      
+        </apex:pageBlockTable>                
+            </apex:pageBlockSection>
+            </apex:pageBlock>
+                   
+    </apex:form>
+</apex:page>

@@ -1,0 +1,63 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false">
+ <Html>
+<Head>
+<apex:includeScript value="{!$Resource.min}" />
+<apex:includeScript value="{!$Resource.WizardJs}" />
+<apex:stylesheet value="{!URLFOR($Resource.wizard, 'wizard/formWizard.css')}"/>
+<!--<apex:includeScript value="{!URLFOR($Resource.wizard,'wizard/formWizard.js')}"/>-->
+
+<script type="text/javascript">
+
+var myform=new formtowizard({
+    formid: 'feedbackform',
+    persistsection: true,
+    revealfx: ['slide', 500]
+})
+
+</script>
+</Head>
+
+<body>
+<form id="feedbackform">
+
+<fieldset class="sectionwrap">
+<legend>Basic Information</legend>
+Name:<br /> <input id="username" type="text" size="35" /><br />
+Age:<br /> <input id="age" type="text" size="6" /><br />
+Sex: <input type="radio" name="sex" value="male" /> Male <input type="radio" name="sex" value="female" /> Female 
+</fieldset>
+
+<fieldset class="sectionwrap">
+<legend>Shipping Address</legend>
+Country:<br /> <input id="country" type="text" size="35" /><br />
+State/Province:<br /> <input id="state" type="text" size="35" /><br />
+Address #1:<br /> <input id="addr1" type="text" size="35" /><br />
+Address #2:<br /> <input id="addr2" type="text" size="35" /><br />
+</fieldset>
+
+<fieldset class="sectionwrap">
+<legend>Comments</legend>
+Any additional instructions:<br /> <textarea id="feedback" style="width:350px;height:150px"></textarea><br />
+<input type="submit" />
+</fieldset>
+
+
+<apex:form >
+<fieldset class="sectionwrap">
+<apex:pageBlock >
+<apex:pageBlockSection columns="2">
+<legend>My Page</legend>
+<apex:inputText label="Name"/>
+<apex:inputText Label="Age"/>
+<apex:inputText Label="Gender"/>
+<input type="submit" />
+</apex:pageBlockSection>
+</apex:pageBlock>
+</fieldset>
+</apex:form>
+
+
+</form>
+</body>
+</Html>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="errormessages">
+<apex:form >
+<apex:pageMessages ></apex:pageMessages>
+<apex:pageBlock >
+<apex:inputtext />
+
+<apex:commandButton value="type1" action="{!e1}"/>
+<apex:commandButton value="type2" action="{!e2}"/>
+<apex:commandButton value="type3" action="{!e3}"/>
+<apex:commandButton value="type4" action="{!e4}"/>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,46 @@
+<apex:page controller="sss_dup1">
+    <apex:form >
+        <apex:pageBlock > 
+            <apex:pageBlockSection >  
+            
+             <apex:pageBlockTable value="{!courseDetailsList}" var="o" >
+                	<apex:column value="{!o.irn}" headerValue="Irn"/>
+           	  		<apex:column value="{!o.classRostNum}" headerValue="classRostNum"/>
+                    <apex:column value="{!o.courseOfferingNum}" headerValue="courseOfferingNum"/>
+                    <apex:column value="{!o.courseID}" headerValue="courseID"/>
+                    <apex:column value="{!o.courseTitle}" headerValue="courseTitlem"/>
+                    <apex:column value="{!o.grade}" headerValue="grade"/>
+                    <apex:column value="{!o.officialStartDate}" headerValue="officialStartDate"/>
+                    <apex:column value="{!o.officialEndDate}" headerValue="officialEndDate"/>
+                    <apex:column value="{!o.scheduledOrga}" headerValue="scheduledOrga"/>
+                    <apex:column value="{!o.programOrga}" headerValue="programOrga"/>
+                    <apex:column value="{!o.courseCreditEarned}" headerValue="courseCreditEarned"/>
+                    <apex:column value="{!o.courseCredit}" headerValue="courseCredit"/>
+                    <apex:column value="{!o.courseStatusType}" headerValue="courseStatusType"/>
+                    <apex:column value="{!o.resourceFlag}" headerValue="resourceFlag"/>
+                    <apex:column value="{!o.displayDiscussionLinkFlag}" headerValue="displayDiscussionLinkFlag"/>
+                    <apex:column value="{!o.classroomVersion}" headerValue="classroomVersion"/>
+                    <apex:column value="{!o.groupID}" headerValue="groupID"/>
+                    <apex:column value="{!o.courseOfferingType}" headerValue="courseOfferingType"/>
+                    <apex:column value="{!o.unitType}" headerValue="unitType"/>
+                    <apex:column value="{!o.numOfUnits}" headerValue="numOfUnits"/>
+                    <apex:column value="{!o.aznaID}" headerValue="aznaID"/>
+                    <apex:column value="{!o.deadDate}" headerValue="deadDate"/>
+                    <apex:column value="{!o.heldGradeReason}" headerValue="heldGradeReason"/>
+                    <apex:column value="{!o.appliedByAudit}" headerValue="appliedByAudit"/>
+                    <apex:column value="{!o.instructorFirstName}" headerValue="instructorFirstName"/>
+                    <apex:column value="{!o.instructorLastName}" headerValue="instructorLastName"/>
+                    <apex:column value="{!o.addressLineOne}" headerValue="addressLineOne"/>
+                    <apex:column value="{!o.addressLineTwo}" headerValue="addressLineTwo"/>
+                    <apex:column value="{!o.addressLineThree}" headerValue="addressLineThree"/>
+                    <apex:column value="{!o.addressLineFour}" headerValue="addressLineFour"/>
+                    <apex:column value="{!o.city}" headerValue="city"/>
+                    <apex:column value="{!o.state}" headerValue="state"/>
+                    <apex:column value="{!o.postalCode}" headerValue="postalCode"/>
+                    <apex:column value="{!o.country}" headerValue="country"/> --> 
+   
+           </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

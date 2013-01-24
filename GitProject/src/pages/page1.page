@@ -1,0 +1,88 @@
+<apex:page Controller="dupclass" >
+
+<apex:sectionHeader title="New Position" />
+
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons location="top">
+<apex:commandButton action="{!save}" value="Save" />
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="Details" columns="2">
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Position Title" ><apex:inputtext id="positi"  required="true"/></apex:outputLabel>
+ </apex:pageBlockSectionItem>
+ 
+ <apex:pageBlockSectionitem > 
+                       <apex:outputLabel value="Owner"> </apex:outputLabel>{!$User.FirstName & ' '& $User.LastName}                     
+                     </apex:pageBlockSectionitem>
+                      <apex:pageBlockSectionitem > 
+        <apex:outputLabel value="Status"></apex:outputLabel>
+                   <apex:selectList id="status"  size="1">
+<apex:selectOption itemValue="NewPosition" itemLabel="New Position"/>
+<apex:selectOption itemValue="OpenApproved" itemLabel="OpenApproved"/>
+<apex:selectOption itemValue="Pending Approval " itemLabel="Pending Approval"/>
+</apex:selectList>               
+                     </apex:pageBlockSectionitem>
+                    
+                      <apex:pageBlockSectionitem > 
+        <apex:outputLabel value="Location"></apex:outputLabel>
+                   <apex:selectList id="status"  size="1">
+<apex:selectOption itemValue="india" itemLabel="India"/>
+<apex:selectOption itemValue="america" itemLabel="America"/>
+<apex:selectOption itemValue="australia " itemLabel="Australia"/>
+</apex:selectList>               
+                     </apex:pageBlockSectionitem>
+                     
+                   
+                    
+                      
+                        
+                          <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Hire Date"><apex:inputText id="date_From2"  size="10" onfocus="DatePicker.pickDate(true, '{!$Component.date_From}', false);"/> [{!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}]
+                          </apex:outputLabel>
+                         </apex:pageBlockSectionItem>
+                         
+                         <apex:pageBlockSectionItem >
+                         <apex:outputLabel value="Open Date"><apex:inputText id="date_From2" size="10" onfocus="DatePicker.pickDate(true, '{!$Component.date_From}', false);"/> [{!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}]
+                         </apex:outputLabel>
+                         </apex:pageBlockSectionItem>
+                         
+                         <apex:pageBlockSectionItem >
+                         <apex:outputLabel value="Close Date"><apex:inputText id="date_From3" size="10" onfocus="DatePicker.pickDate(true, '{!$Component.date_From}', false);"/> [{!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}]
+                         </apex:outputLabel>
+                         </apex:pageBlockSectionItem>
+                    
+                    
+</apex:pageBlockSection>
+ 
+ <apex:pageBlockSection title="Languages Known" columns="2">
+ <apex:inputCheckbox label="Java"/>
+ <apex:inputCheckbox label="JavaScript"/>
+<apex:inputCheckbox label="C#"/>
+<apex:inputCheckbox label="Apex"/>
+
+ </apex:pageBlockSection>
+ 
+ 
+ <apex:pageBlockSection title="Compensation" columns="2">
+
+ <apex:inputtext label="Minimum salary" id="minimumsalary" />
+  <apex:inputtext label="Maximum salary" id="maximumsalary" />
+
+ </apex:pageBlockSection>
+ <apex:pageBlockSection title="Description" columns="1">
+
+ <apex:inputTextarea label="Job Description" id="jobdescription" />
+  <apex:inputtextarea label="Responsibilities" id="responsibilities" />
+ <apex:inputtextarea label="Skills Required" id="skillsrequired" />
+  <apex:inputtextarea label="Educational Requirements" id="educationalrequirements" />
+
+  
+
+ </apex:pageBlockSection>
+ 
+ 
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page controller="book_xml">
+	<apex:form >
+		<apex:pageBlock >
+		 <apex:pageBlockSection >
+				<apex:pageBlockTable value="{!Parse}" var="result">
+					<apex:column value="{!result.name}"/>
+					<apex:column value="{!result.author}"/>
+					<apex:column value="{!result.id}"/>
+				</apex:pageBlockTable>   
+			</apex:pageBlockSection>  
+			
+			
+			
+		 	<apex:pageBlockSection >
+				<apex:pageBlockTable value="{!choc_parse}" var="result1">
+					<apex:column value="{!result1.cname}"/>
+					<apex:column value="{!result1.cost}"/>
+					
+				</apex:pageBlockTable>   
+			</apex:pageBlockSection> 
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

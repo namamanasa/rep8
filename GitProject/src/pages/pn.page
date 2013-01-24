@@ -1,0 +1,84 @@
+<apex:page >
+
+<div style="background-color:#d3d3d3;position:absolute;left:200px;right:200px;padding-left:30px;">
+<apex:form >
+<apex:pageBlock >
+
+<apex:pageblockSection columns="1">
+        <apex:pageBlockSectionItem >
+        <apex:panelGrid border="0" bgcolor="white">
+        <apex:outputText value="COM 515" style="font-weight: bold"/>
+        <apex:outputText value="Managerial" style="color:blue"/>
+        <apex:outputText value="Communication" style="color:blue"/>
+        <apex:outputText value="A" style="font-size:40px;color:#006400"/>
+        <hr width="150px" color="#eee5de"/>
+        <apex:panelGrid columns="2">
+        <apex:outputText value="Started" style="color:#696969"/>
+        <apex:outputText value="03/28/2002" style="color:#696969"/>
+        <apex:outputText value="Completed" style="color:#696969"/>
+        <apex:outputText value="04/11/2002" style="color:#696969"/>
+        </apex:panelGrid>
+        <hr width="150px" color="#eee5de"/>
+        <apex:outputText value="Actions^" style="color:#0000ff"/>
+        </apex:panelGrid>
+        </apex:pageBlockSectionItem> 
+      
+    
+        <apex:pageBlockSectionItem >
+        
+        <apex:panelGrid border="0" bgcolor="white">
+        <apex:panelGrid ></apex:panelGrid>
+        <apex:outputText value="COM 512" style="font-weight: bold"/>
+        <apex:panelGrid columns="2" >
+        <apex:outputText value="Human Relations and Organisational behaviour" style="color:blue"/>
+   
+        <apex:outputText value="A" style="font-size:40px;color:#006400"/>
+
+        </apex:panelGrid>
+        
+        <hr width="300px" color="#eee5de"/>
+        <apex:panelGrid columns="3">
+        <apex:outputText value="Started" style="color:#696969"/>
+        <apex:outputText value="03/28/2002" style="color:#696969"/> 
+        <apex:outputText value="Actions^" style="color:#0000ff"/>
+        <apex:outputText value="Completed" style="color:#696969"/>
+        <apex:outputText value="04/11/2002" style="color:#696969"/>
+        </apex:panelGrid>
+        
+        </apex:panelGrid>
+        </apex:pageBlockSectionItem> 
+        <div >
+         <apex:pageBlockSectionItem >
+        
+        <apex:panelGrid border="0" bgcolor="white">
+        <apex:panelGrid ></apex:panelGrid>
+        <apex:outputText value="COM 512" style="font-weight: bold"/>
+        <apex:panelGrid columns="2" >
+        <apex:outputText value="Human Relations and Organisational behaviour" style="color:blue"/>
+        <apex:outputText value="A" style="font-size:40px;color:#006400"/>
+        </apex:panelGrid>
+        
+        <hr width="300px" color="#eee5de"/>
+        <apex:panelGrid columns="3">
+        <apex:outputText value="Started" style="color:#696969"/>
+        <apex:outputText value="03/28/2002" style="color:#696969"/> 
+        <apex:outputText value="Actions^" style="color:#0000ff"/>
+        <apex:outputText value="Completed" style="color:#696969"/>
+        <apex:outputText value="04/11/2002" style="color:#696969"/>
+        </apex:panelGrid>
+        
+        </apex:panelGrid>
+        </apex:pageBlockSectionItem> 
+        
+        
+        </div>
+</apex:pageBlockSection>
+
+
+</apex:pageblock>
+
+
+</apex:form>
+</div>
+
+</apex:page>

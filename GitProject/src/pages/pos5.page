@@ -1,0 +1,127 @@
+<apex:page controller="MyPositionController5">
+    <apex:sectionHeader title="Position Edit" subtitle="New Position"/>
+    <apex:form id="form1">
+    <script>
+    
+        function validation()
+        {
+            var title=document.getElementById("{!$Component.form1.block.blocksection1.titleid}").value;
+            var min=document.getElementById("{!$Component.form1.block.blocksection2.minpayid}").value;
+            var max=document.getElementById("{!$Component.form1.block.blocksection2.maxpayid}").value;
+            min=min*1;
+            max=max*1;
+            if(title=='' && min=='' && max==''){
+                alert("must enter the required fields.");
+                return false;
+            }
+            if(title==''){
+                alert("must enter the Position Title.");
+                return false;
+            }
+            else if(min==''){
+                alert("must enter the Min Pay.");
+                return false;
+            }
+            else if(max==''){
+                alert("must enter the Max Pay.");
+                return false;
+            }
+            else if(min>max){
+                alert("min pay should not exceed the max pay");
+                return false;
+            }
+            else{
+                return true;
+            }
+       }
+    </script>
+    <apex:pageMessages />
+            <apex:pageBlock title="Position Edit" mode="edit" id="block">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="save" onclick="return validation()"/>
+                <apex:commandButton action="{!savenew}" value="save & new"/>
+                <apex:commandButton action="{!cancel}" value="cancel"/>
+            </apex:pageBlockButtons>   
+            <apex:pageBlockSection title="Information" id="blocksection1">
+               
+                <apex:inputText id="titleid" label="Position Title" value="{!positiontitle}" size="20"/>
+               
+                <apex:pageBlockSectionItem id="blocksectionitem2">
+                    <apex:outputLabel value="Owner"/>{!$User.FirstName & ' ' & $User.LastName}
+                </apex:pageBlockSectionItem>
+                
+                <apex:selectList label="Status" id="statusid" value="{!status}" size="1">
+                    <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                    <apex:selectOption itemvalue="New Position" itemLabel="New Position"/>
+                    <apex:selectOption itemValue="Pending Approval" itemLabel="Pending Approval"/>
+                    <apex:selectOption itemValue="Open - Approved" itemLabel="Open - Approved"/>
+                    <apex:selectOption itemValue="Closed - Filled" itemLabel="Closed - Filled"/>
+                    <apex:selectOption itemValue="Closed - Not Approved" itemLabel="Closed - Not Approved"/>
+                    <apex:selectOption itemValue="Closed - Canceled" itemLabel="Closed - Canceled"/>
+                </apex:selectList>
+               
+                <apex:selectList label="Location" id="locationid" value="{!location}" size="1">
+                    <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                    <apex:selectOption itemvalue="San Fisco, CA" itemLabel="San Francisco, CA"/>
+                    <apex:selectOption itemValue="Austin,TX" itemLabel="Austin,TX"/>
+                    <apex:selectOption itemValue="Boulder, CO" itemLabel="Boulder, CO"/>
+                    <apex:selectOption itemValue="London, England" itemLabel="London, England"/>
+                    <apex:selectOption itemValue="New York, NY" itemLabel="New York, NY"/>
+                    <apex:selectOption itemValue="Mumbai, India" itemLabel="Mumbai, India"/>
+                    <apex:selectOption itemValue="Sydney, Australia" itemLabel="Sydney, Australia"/>
+                    <apex:selectOption itemValue="Tokyo, Japan" itemLabel="Tokyo, Japan"/>
+                </apex:selectList>
+               
+                <apex:selectList label="Type" id="typeid" value="{!type}" size="1">
+                    <apex:selectOption itemValue="--None--" itemLabel="--None--"/>
+                    <apex:selectOption itemValue="Full Time" itemLabel="Full Time"/>
+                    <apex:selectOption itemValue="Part Time" itemLabel="Part Time"/>
+                    <apex:selectOption itemValue="Internship" itemLabel="Internship"/>
+                    <apex:selectOption itemValue="Contractor" itemLabel="Contractor"/>
+                </apex:selectList>
+               
+                <apex:inputText id="opendateid" label="Open Date" value="{!opendate}" size="15" onfocus="DatePicker.pickDate(true,'{!$Component.opendateid}',false);"/>
+               
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Functional Area" for="fareaid"/>
+                    <apex:selectList id="fareaid" label="Functional Area" value="{!functionalarea}" size="1">
+                        <apex:selectOptions value="{!fareas}"/>
+                        <apex:actionSupport event="onchange" reRender="{!joblevel}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+               
+                <apex:inputText id="hirebyid" label="Hire By" value="{!hireby}" size="15" onfocus="DatePicker.pickDate(true,'{!$Component.hirebyid}',false);"/>
+               
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Job Level" for="joblevelid"/>
+                    <apex:selectList id="joblevelid" value="{!joblevel}" size="1" disabled="{!joboption}">
+                        <apex:selectOptions value="{!joblevels}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+               
+                <apex:inputText id="closedateid" label="Close Date" value="{!closedate}" size="15" onfocus="DatePicker.pickDate(true,'{!$Component.closedateid}',false);"/>
+
+                <apex:inputCheckbox id="travelid" label="Travel Required" value="{!travelrequired}"/>
+             </apex:pageBlockSection>
+
+             <apex:pageBlockSection title="Compensation" id="blocksection2">
+                <apex:inputText id="minpayid" label="Min Pay" value="{!minpay}"/>
+                <apex:inputText id="maxpayid" label="Max Pay" value="{!maxpay}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Description" columns="1" id="blocksection3">
+                <apex:inputTextarea id="descriptionid" label="Job Description" value="{!jobdescription}"/>
+                <apex:inputTextarea id="resid" label="Responsibilities" value="{!responsibilities}"/>
+                <apex:inputTextarea id="skillsid" label="Skills Required" value="{!skillsrequired}"/>
+                <apex:inputTextarea id="eduid" label="Educational Requirements" value="{!educationalrequirements}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Required Languages" id="blocksection4">
+                <apex:inputCheckbox id="javaid" label="Java" value="{!java}"/>
+                <apex:inputCheckbox id="jsid" label="JavaScript" value="{!javascript}"/>
+                <apex:inputCheckbox id="cid" label="C#" value="{!c}"/>
+                <apex:inputCheckbox id="apexid" label="Apex" value="{!apex}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

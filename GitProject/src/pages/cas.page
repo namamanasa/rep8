@@ -1,0 +1,26 @@
+<apex:page >
+<style>
+#rt
+{
+position:absolute;
+right:0px;
+
+}
+</style>
+<apex:form >
+
+<apex:pageBlock >
+
+
+<apex:commandButton value="Add a Course" id="cmd1" />
+<apex:commandButton value="Schedule a Break" id="cmd2"/>
+Estimated Graduation Date:12/12/2004
+<body id="rt"><apex:commandButton value=",,,"/>
+<apex:commandButton value="..."/>
+</body>
+
+
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

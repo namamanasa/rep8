@@ -1,0 +1,73 @@
+<apex:page standardStylesheets="false" showHeader="false">
+<div style="background-color:#eee9e9;position:absolute;padding-left:20px;left:200px;right:200px;border-style:solid;">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="2">
+    <apex:pageblock >
+      <h3 >RG502</h3>
+  
+          <div style="font-size:18pt">
+          <div>Human Relations </div>
+          <div> and Organisational</div>
+            Behaviour</div><br/>
+        
+        <apex:panelGrid columns="2">
+        <apex:outputText >Creedits</apex:outputText>
+        <apex:outputText ><b>3</b></apex:outputText>
+        <apex:outputText >Duration</apex:outputText>
+        <apex:outputText >4 Weeks</apex:outputText>
+        <apex:outputText >Started On</apex:outputText>
+        <apex:outputText >04/25/2002</apex:outputText>
+        <apex:outputText >Completing On</apex:outputText>
+        <apex:outputText >05/13/2002</apex:outputText>
+        
+        </apex:panelGrid>
+        
+        <apex:panelGrid columns="2">
+            <apex:outputText style="font-size:40pt;color:green" value="A"></apex:outputText>
+            <apex:outputText style="font-size:10pt;color:blue" value="Grade Detail"></apex:outputText>
+        </apex:panelGrid>
+         
+         <hr width="190px"/>
+         
+         <apex:commandButton value="Reschedule" style="background-color:#00008b;color:white" /><br/>
+         <apex:commandButton value="Withdraw" style="background-color:#00008b;color:white"/>
+         
+         
+         
+  </apex:pageblock>
+  
+
+  <apex:pageBlock >
+ 
+  <h3 style="padding-left:30pt;">  Course Description</h3> 
+
+     <p style="text-align:left;font-size:13pt;padding-left:30pt">
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Level: Beginner; Duration: 20-30 minutes
+        You’ve built an application that captures and manipulates warehouse data, but you want to report on that data as well. Force.com
+        provides a drag-and-drop report builder that lets you quickly organize and present your data. It's easy to group and summarize
+        your data, and add formulas and charts. You can then share these reports to help business users make more informed decisions.
+        You may have noticed the Reports and Dashboards tabs that were automatically added when you created your app.<br/><br/> The Reports
+        tab provides access to a set of predefined reports, all of the reports that you create, and the reports in folders that you can
+        access. The Dashboards tab shows data from charts, gauges, tables, metrics, or Visualforce pages. It's easy to group and summarize
+        your data, and add formulas and charts. You can then share these reports to help business users make more informed decisions.
+        You may have noticed the Reports and Dashboards tabs that were automatically added when you created your app</p>
+
+
+    <p><h3 style="padding-left:30pt;padding-top:20pt">Course Objectives</h3> </p>
+
+        <p style="padding-left:30pt" >your data, and add formulas and charts. You can then share these reports to help business users make more informed decisions.
+        You may have noticed the Reports and Dashboards tabs that were automatically added when you created your app. The Reports
+        tab provides access to a set of predefined reports, all of the reports that you create, and the reports in folders that you can
+        access. The Dashboards tab shows data from charts, gauges, tables, metrics, or Visualforce pages.</p>
+        
+    </apex:pageBlock>
+  </apex:pageBlockSection>
+  
+  </apex:pageBlock>
+  
+  </apex:form>
+  </div>
+</apex:page>

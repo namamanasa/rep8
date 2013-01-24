@@ -1,0 +1,6 @@
+<apex:page >
+Today's full date is: {!TODAY()}<br/>
+Today's Month is: {!MONTH(TODAY())}/{!DAY(TODAY())}<br/>
+Number Day of the Month: {!DAY(TODAY())}<br/>
+Current Year: {!YEAR(TODAY())}<br/>
+</apex:page>

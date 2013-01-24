@@ -1,0 +1,7 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:outputText style="font-weight:800;font-size:70">Congratulations</apex:outputText>
+  <font size="10">Manasa</font>
+  This is your new Page: thankYou
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>
